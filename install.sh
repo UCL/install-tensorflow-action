@@ -5,7 +5,7 @@ set -e
 if [ "$#" -lt 1 ]; then
     version="2.9.1"
     os="linux"
-else if [ "$#" -lt 2 ]; then
+elif [ "$#" -lt 2 ]; then
     version="$1"
     os="linux"
 else

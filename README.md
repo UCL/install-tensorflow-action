@@ -5,7 +5,7 @@ Install TensorFlow C API as a step in a GitHub workflow.
 
 ```
   steps:
-    - uses: brianjjones/install-tensorflow-action
+    - uses: UCL/install-tensorflow-action@main
       with:
         version: 2.11.0
         os: linux
