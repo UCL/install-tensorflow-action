@@ -5,9 +5,12 @@ inputs:
   version:
     description: 'The release version of TensorFlow to install'
     required: false
+  os:
+    description: 'Operating system to install on ("linux", "windows", or "darwin" for macOS)'
+    required: false
 
 runs:
   using: composite
   steps:
-    - run: ${{ github.action_path }}/install.sh ${{ inputs.version }}
+    - run: ${{ github.action_path }}/install.sh ${{ inputs.version }} ${{ inputs.os }}
       shell: bash
