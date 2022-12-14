@@ -1,5 +1,5 @@
 # install-tensorflow-action
-Install TensorFlow as a step in a GitHub workflow.
+Install TensorFlow C API as a step in a GitHub workflow.
 
 ### Use
 
