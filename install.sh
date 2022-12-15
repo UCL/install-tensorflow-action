@@ -3,7 +3,7 @@
 set -e
 
 if [ "$#" -lt 1 ]; then
-    version="2.9.1"
+    version="2.11.0"
     os="linux"
 elif [ "$#" -lt 2 ]; then
     version="$1"
@@ -17,4 +17,8 @@ FILENAME="libtensorflow-cpu-$os-x86_64-$version.tar.gz"
 echo "Using $FILENAME"
 wget -q --no-check-certificate https://storage.googleapis.com/tensorflow/libtensorflow/${FILENAME}
 sudo tar -C /usr/local -xzf ${FILENAME}
-sudo ldconfig /usr/local/lib
+if [[ $os == "linux" ]]; then
+    sudo ldconfig /usr/local/lib
+else
+    export LD_LIBRARY_PATH=/usr/local/lib
+fi
