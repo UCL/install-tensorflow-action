@@ -16,4 +16,4 @@ Operating systems available:
 - Windows ("windows")
 - MacOS ("darwin")
 
-Default options are version 2.9.1 and Linux.
+Default options are version 2.11.0 and Linux.
