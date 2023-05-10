@@ -14,3 +14,6 @@ runs:
   steps:
     - run: ${{ github.action_path }}/install.sh ${{ inputs.version }} ${{ inputs.os }}
       shell: bash
+    - run: echo "LD_LIBRARY_PATH=/usr/local/lib" >> "${GITHUB_ENV}"
+      if: inputs.os == 'darwin'
+      
