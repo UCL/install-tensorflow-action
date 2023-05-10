@@ -19,4 +19,4 @@ wget -q --no-check-certificate https://storage.googleapis.com/tensorflow/libtens
 sudo tar -C /usr/local -xzf ${FILENAME}
 if [[ $os == "linux" ]]; then
     sudo ldconfig /usr/local/lib
-
+fi
